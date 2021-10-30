@@ -1,6 +1,6 @@
 import { Route, Redirect, Switch } from "react-router-dom";
 import { Navbar, ProtectedRoute } from "./components";
-import { Students, Users, UserDetails, ContactUs, Login } from "./Pages";
+import { Students, Posts, Users, UserDetails, ContactUs, Login } from "./Pages";
 
 export const App = () => {
   return (
@@ -10,6 +10,9 @@ export const App = () => {
         <Switch>
           <ProtectedRoute path="/students">
             <Students />
+          </ProtectedRoute>
+          <ProtectedRoute path="/posts">
+            <Posts />
           </ProtectedRoute>
           <Route path="/contact">
             <ContactUs />
